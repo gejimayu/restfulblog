@@ -1,0 +1,19 @@
+<% include partials/header.ejs %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2 border">
+            <% blogs.forEach(function(ele){ %>
+                <div>
+                    <h3><%= ele.title %></h3>
+                    <image src=<%= ele.image %>>
+                    <p><%=ele.created.toDateString() %></p>
+                    <p><%-ele.content.substring(0,100) %>..</p>
+                    <a class="btn btn-success" href="/blogs/<%=ele._id%>">View More</a>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+</div>
+    
+<% include partials/footer.ejs %>

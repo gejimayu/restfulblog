@@ -1,0 +1,18 @@
+<% include partials/header.ejs %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2 border">
+            <h3><%= blog.title %></h3>
+            <image src=<%= blog.image %>>
+            <p><%=blog.created.toDateString() %></p>
+            <p><%-blog.content %></p>
+            <a class="btn btn-primary" href="/blogs/<%=blog._id%>/edit">Edit</a>
+            <form class="inline-bt" action="/blogs/<%=blog._id%>?_method=DELETE" method="POST">
+                <button value="Submit" class="btn btn-danger">Delete</button>
+            </form>
+        </div>
+    </div>
+</div>
+    
+<% include partials/footer.ejs %>

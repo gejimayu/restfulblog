@@ -1,0 +1,8 @@
+.border {
+    margin-top: 25px;
+    border: 1px solid gray;
+    padding-bottom: 25px;
+}
+.inline-bt {
+    display: inline;
+}
